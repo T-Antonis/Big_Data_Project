@@ -77,6 +77,18 @@ It includes fields such as:
 
 This dataset is used in Query 3 together with census population data.
 
+## Query Summary
+
+This project implements four analytical Spark queries over Los Angeles crime, police station, census, and income datasets.
+
+**Query 1** analyzes crime activity by part of the day. It classifies each crime into Morning, Afternoon, Evening, or Night based on the crime time, then calculates the number and percentage of crimes for each day part. It was implemented with DataFrame API, DataFrame API with UDF, RDD API, and Parquet input.
+
+**Query 2** analyzes monthly crime patterns per year. It extracts year and month from the crime date, counts crimes per month, and ranks the months with the highest crime activity for each year. It was implemented with both DataFrame API and SQL API.
+
+**Query 3** combines census population data and income data by ZIP code. It calculates total population per ZIP code, joins it with estimated median household income, and produces an income-related metric per ZIP code. It was implemented with DataFrame API, RDD API, and DataFrame API with join hints.
+
+**Query 4** finds the nearest police station for each crime incident. It compares each crime location with all police station locations, calculates distances, keeps the closest station per crime using a window function, and aggregates the results by police division. It was implemented with DataFrame API and DataFrame API with join hints.
+
 ## Technologies Used
 
 - Python
