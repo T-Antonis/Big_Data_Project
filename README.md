@@ -24,6 +24,59 @@ The project demonstrates:
 - Broadcast joins, sort-merge joins, shuffled hash joins, nested loop joins, and Cartesian products
 - Debugging Spark jobs through Kubernetes driver pod logs
 
+## Datasets
+
+The project uses public datasets related to Los Angeles crime incidents, police stations, census population data, and income statistics.
+
+The datasets are expected to be available through HDFS paths configured in `src/common.py`.
+
+### Crime Data
+
+The main crime dataset contains reported crime incidents in Los Angeles.  
+It includes fields such as:
+
+- Crime identifier
+- Date and time information
+- Crime location
+- Latitude and longitude
+- Area / division information
+
+This dataset is used mainly in Query 1, Query 2, and Query 4.
+
+### Police Stations Data
+
+The police stations dataset contains information about Los Angeles police divisions and their geographic coordinates.
+
+It includes fields such as:
+
+- Police division name
+- Station longitude
+- Station latitude
+
+This dataset is used in Query 4 to calculate the nearest police station for each crime incident.
+
+### Census Blocks Data
+
+The census blocks dataset contains population information by geographic area.
+
+It includes fields such as:
+
+- ZIP Code / ZCTA
+- Population
+
+This dataset is used in Query 3 to calculate the total population per ZIP code.
+
+### Income Data
+
+The income dataset contains estimated median household income by ZIP code.
+
+It includes fields such as:
+
+- ZIP Code
+- Estimated median household income
+
+This dataset is used in Query 3 together with census population data.
+
 ## Technologies Used
 
 - Python
