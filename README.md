@@ -105,23 +105,45 @@ This project implements four analytical Spark queries over Los Angeles crime, po
 ## Repository Structure
 
 ```text
+
 .
+
 ├── README.md
+
 ├── LLM_USAGE.md
+
 ├── scripts/
+
 │   ├── submit_k8s.sh
+
 │   └── submit_local.sh
+
 └── src/
+
     ├── common.py
+
     ├── convert_crime_csv_to_parquet.py
+
     ├── query1_df.py
+
     ├── query1_df_parquet.py
+
     ├── query1_df_udf.py
+
     ├── query1_rdd.py
+
     ├── query2_df.py
+
     ├── query2_sql.py
+
     ├── query3_df.py
+
     ├── query3_df_hints.py
+
     ├── query3_rdd.py
+
     ├── query4_df.py
+
     └── query4_df_hints.py
+
+```
